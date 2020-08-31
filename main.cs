@@ -11,12 +11,20 @@ class MainClass {
     Console.WriteLine ("Calculadora !");
 
     double num1, num2, result;
-    string a, b;
-    char c;
+    string a, b, c;
+    char caractere;
 
     Console.WriteLine ("digite o primeiro valor: ");
-    
-    Console.WriteLine ();
+    a = Console.ReadLine();
+    num1 = double.Parse(a);
+
+    Console.WriteLine ("Digite o segundo valor: ");
+    b = Console.ReadLine();
+    num2 = double.Parse(b);
+
+    Console.WriteLine ("Digite qual operação deseja realizar!");
+
+    Console.WriteLine ("multiplicação(*), divisão(/), subtração(-), soma(+): ");
   }
 
   public static void Main (string[] args) {
