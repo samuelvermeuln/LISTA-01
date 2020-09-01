@@ -10,7 +10,7 @@ class MainClass {
   public static void calculadora () {
     Console.WriteLine ("Calculadora !");
 
-    double num1, num2, result;
+    double num1, num2, result, result1, result2, result3;
     string a, b, c;
     char caractere;
 
@@ -22,9 +22,35 @@ class MainClass {
     b = Console.ReadLine();
     num2 = double.Parse(b);
 
+    result = num1 + num2;
+    result1 = num1 - num2;
+    result2 = num1 * num2;
+    result3 = num1 / num2;
+
     Console.WriteLine ("Digite qual operação deseja realizar!");
 
-    Console.WriteLine ("multiplicação(*), divisão(/), subtração(-), soma(+): ");
+    Console.WriteLine ("multiplicação( * ), divisão( / ), subtração( - ), soma( + ): ");
+    c = Console.ReadLine();
+    caractere = char.Parse(c);
+
+    if (caractere == '+')
+    {
+      Console.WriteLine("soma :" + result);
+    }
+    else if (caractere == '-')
+    {
+      Console.WriteLine("subtração: " + result1);
+    }
+    else if (caractere == '*')
+    {
+      Console.WriteLine("multiplicação: " + result2);
+    }
+    else if (caractere == '/')
+    {
+      Console.WriteLine("divisão: " + result3);
+    }
+
+    
   }
 
   public static void Main (string[] args) {
