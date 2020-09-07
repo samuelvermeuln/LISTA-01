@@ -49,11 +49,20 @@ class MainClass {
     {
       Console.WriteLine("divisão: " + result3);
     }
+    else 
+    {
+      Console.WriteLine("Entrada errada!");
+    }
 
     
+  }
+  public static void cardapio (){
+    
+
   }
 
   public static void Main (string[] args) {
     calculadora();
+    cardapio();
   }
 }
