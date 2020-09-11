@@ -1,19 +1,5 @@
 using System;
-/*
-2- O cardápio de uma casa de lanches é dado pela tabela abaixo:
-Código Produto Preço Unitário (R$)
----------------------------------
-100  Cachorro quente   R$ 1,70
-101   Bauru Simples    R$ 2,30
-102   Bauru com ovo    R$ 2,60
-103   Hamburguer       R$ 2,40
-104   Cheeseburguer    R$ 2,50
-105   Refrigerante     R$ 1,00
-----------------------------------
-Escreva um algoritmo que leia o código do item adquirido pelo consumidor e a
-quantidade, calculando e mostrando o valor a pagar. Não será necessário exibir o produto
-e o valor, somente o valor final
-*/
+
 
 class MainClass {
   public static void calculadora () {
@@ -134,9 +120,76 @@ class MainClass {
     }
 
   }
+  public static void votação (){
+    int jose = 0, joana = 0, roberto = 0, branco = 0, nulo = 0;
+    int eleitores;
+    int votacao, vencedor = 0;
+    int votantes = 0;
+
+    Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+    Console.WriteLine(" SISTEMA DE CONTAGEM DE VOTOS ");
+    Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+
+    Console.Write("Digite o numero de Eleitores: ");
+    eleitores = int.Parse(Console.ReadLine());
+
+    Console.WriteLine(" 33 - José Couve \n\r 25 - Joana Bravo \n\r 10 - Roberto Nove \n\r 0  - Voto branco \n\r 4  - Voto nulo");
+    
+    do 
+    {
+
+    Console.Write("Digite o numero do candidato: ");
+    votacao = int.Parse(Console.ReadLine());
+    votantes = votantes + 1;
+    // sistema para saber qual candidato venceu
+    vencedor = votacao;
+    if (votacao > vencedor);
+    vencedor = votacao;    
+
+    switch (votacao){
+
+    case 33:    
+      jose++;
+      break;
+
+    case 25:    
+      joana++;
+      break;
+
+    case 10:    
+      roberto++;
+      break;
+
+    case 0:    
+      branco++;
+      break;
+
+    case 4:    
+      nulo++;
+      break;
+
+    default:    
+      Console.WriteLine("Numero do canditado incorreto !");
+      break;
+  
+      }
+
+    } while (votantes < eleitores);
+    //Console.WriteLine("vencedor {0} ", vencedor);
+    Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+    Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+    Console.WriteLine("Numeros de votos do José: " + jose);
+    Console.WriteLine("Numeros de votos da Joana: " + joana);
+    Console.WriteLine("Numeros de votos do Roberto: "+ roberto);
+    Console.WriteLine("votos brancos: " + branco);
+    Console.WriteLine("votos nulos: " + nulo);
+
+  }
+
 
   public static void Main (string[] args) {
     //calculadora();
-    lanchonete();
+    //lanchonete();
+    //votação();
   }
 }
